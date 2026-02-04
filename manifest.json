@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Local LLM Twitter Bot",
+  "version": "1.0",
+  "description": "Replies to trading threads using a local LLM",
+  "permissions": ["storage", "activeTab", "scripting"],
+  "host_permissions": [
+  "https://x.com/*",
+  "https://twitter.com/*",
+  "http://127.0.0.1:11434/*",
+  "http://127.0.0.1:3333/*",
+  "https://api.openai.com/v1/chat/completions"
+],
+
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://twitter.com/*", "https://x.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}

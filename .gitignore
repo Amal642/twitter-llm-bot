@@ -1,0 +1,46 @@
+# ======================
+# Node / Proxy
+# ======================
+node_modules/
+npm-debug.log*
+yarn.lock
+pnpm-lock.yaml
+package-lock.json
+package.json
+
+# ======================
+# Environment / Secrets
+# ======================
+.env
+.env.*
+*.key
+
+# ======================
+# Ollama / Local files
+# ======================
+ollama-cache/
+ollama-logs/
+
+# ======================
+# Chrome Extension
+# ======================
+*.crx
+*.pem
+
+# Chrome temp / build
+dist/
+build/
+
+# ======================
+# OS / Editor junk
+# ======================
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# ======================
+# Logs
+# ======================
+logs/
+*.log
